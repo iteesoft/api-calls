@@ -1,4 +1,4 @@
-name: Master Branch
+name: Main Branch CICD Pipeline
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
   pull_request:
     branches:
       - 'main'
-jobs:
 
+jobs:
   test:
     name: Test - Units & Integrations
     runs-on: ubuntu-18.04
@@ -23,4 +23,4 @@ jobs:
       - name: Maven Verify
         run: mvn -B clean verify -Pintegration-test
       - name: Maven Build
-      - run: mvn clean install
+        run: mvn clean install
