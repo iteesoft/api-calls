@@ -1,4 +1,4 @@
-name: Master Branch Pipeline
+name: Master Branch
 
 on:
   push:
