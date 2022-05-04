@@ -1,4 +1,4 @@
-name: Master Branch
+name: Master Branch Pipeline
 
 on:
   push:
@@ -23,3 +23,5 @@ jobs:
         run: mvn -B clean package -DskipTests
       - name: Maven Verify
         run: mvn -B clean verify -Pintegration-test
+      - name: Maven Build
+      - run: mvn clean install
